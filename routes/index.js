@@ -16,7 +16,7 @@ exports.index = function(req, res){
 
 exports.html = function(req, res){
     var htmlContent = req.body.content;
-    html_jade.convertHtml(htmlContent, {}, function (err, jade) {
+    html_jade.convertHtml(htmlContent, {tabs : true}, function (err, jade) {
         res.send(jade)
     });
 }
